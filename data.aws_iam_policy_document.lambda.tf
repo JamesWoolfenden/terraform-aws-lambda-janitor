@@ -2,11 +2,17 @@ data "aws_iam_policy_document" "lambda" {
 
   statement {
     actions = [
-      "lambda:InvokeFunction"
+      "lambda:InvokeFunction",
+      "lambda:ListFunctions",
+      "lambda:ListVersionsByFunction",
+      "lambda:ListAliases",
+      "lambda:GetAlias"
     ]
 
     resources = ["*"]
   }
+
+
 
   statement {
     actions = [

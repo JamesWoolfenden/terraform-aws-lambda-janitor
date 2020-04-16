@@ -13,7 +13,7 @@ variable "name" {
 
 variable "tracing_mode" {
   type    = string
-  default = "Active"
+  default = "PassThrough"
 }
 
 variable "timeout" {
@@ -33,7 +33,7 @@ variable "memory_size" {
 
 variable "handler" {
   type    = string
-  default = "handler"
+  default = "index.handler"
 }
 
 variable "region" {
