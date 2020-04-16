@@ -4,34 +4,38 @@ variable "common_tags" {
 }
 
 variable "description" {
-  default="Janitor Lambda"
+  default = "Janitor Lambda"
 }
 
 variable "name" {
-  default="janitor"
+  default = "janitor"
 }
 
 variable "tracing_mode" {
-  type=string
-  default="Active"
+  type    = string
+  default = "Active"
 }
 
 variable "timeout" {
-  type=string
-  default="30"
+  type    = string
+  default = "30"
 }
 
 variable "runtime" {
-  type=string
-  default="nodejs12.x"
+  type    = string
+  default = "nodejs12.x"
 }
 
 variable "memory_size" {
-  type=number
-  default=128
+  type    = number
+  default = 128
 }
 
 variable "handler" {
-  type=string
-  default="handler"
+  type    = string
+  default = "handler"
+}
+
+variable "region" {
+  type = string
 }
