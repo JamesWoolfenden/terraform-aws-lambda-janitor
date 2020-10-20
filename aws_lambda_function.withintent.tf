@@ -18,6 +18,6 @@ resource "aws_lambda_function" "janitor" {
   }
 
   tracing_config {
-    mode = var.tracing_mode
+    mode = "PassThrough"
   }
 }
