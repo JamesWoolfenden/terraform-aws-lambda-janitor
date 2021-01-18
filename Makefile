@@ -6,7 +6,7 @@ all: init plan build
 
 init:
 	rm -rf .terraform/modules/
-	terraform init -reconfigure
+	terraform init -reconfigure -upgrade
 
 plan: init
 	terraform plan -refresh=true
@@ -20,9 +20,6 @@ check: init
 destroy: init
 	terraform destroy -force
 
-docs:
-	terraform-docs md . > README.md
-
 valid:
-	tflint
-	terraform fmt -check=true -diff=true
+	terraform validate
+	terraform fmt
