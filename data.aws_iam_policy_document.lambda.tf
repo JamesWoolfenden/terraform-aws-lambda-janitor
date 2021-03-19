@@ -1,5 +1,5 @@
 data "aws_iam_policy_document" "lambda" {
-
+  #checkov:skip=CKV_AWS_111:
   statement {
     actions = [
       "lambda:InvokeFunction",
@@ -13,8 +13,6 @@ data "aws_iam_policy_document" "lambda" {
       aws_lambda_function.janitor.arn,
     "${aws_lambda_function.janitor.arn}/*"]
   }
-
-
 
   statement {
     actions = [
