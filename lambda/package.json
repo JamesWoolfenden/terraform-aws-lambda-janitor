@@ -1,0 +1,19 @@
+{
+  "author": "",
+  "dependencies": {
+    "clean": "^4.0.2",
+    "co": "^4.6.0",
+    "lodash": "^4.17.15"
+  },
+  "description": "",
+  "directories": {
+    "lib": "lib"
+  },
+  "license": "ISC",
+  "main": "handler.js",
+  "name": "janitor",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

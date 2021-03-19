@@ -9,7 +9,9 @@ data "aws_iam_policy_document" "lambda" {
       "lambda:GetAlias"
     ]
 
-    resources = ["*"]
+    resources = [
+      aws_lambda_function.janitor.arn,
+    "${aws_lambda_function.janitor.arn}/*"]
   }
 
 

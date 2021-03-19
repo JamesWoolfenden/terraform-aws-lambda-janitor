@@ -18,6 +18,7 @@ Before you apply this template you will first need to build the Javascript:
 
 ```npm
 cd lambda
+npm install
 npm build
 ```
 
