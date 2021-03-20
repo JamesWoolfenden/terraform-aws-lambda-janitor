@@ -14,6 +14,7 @@ __pycache__/
 *~HEAD
 *backup
 tmp
+lambda
 *~HEAD
 *backup
 *.bak
@@ -24,6 +25,3 @@ tf.plan
 *.log
 output/*.json
 secrets.auto.tfvars
-.terraform.tfstate.lock.info
-*.zip
-node_modules/
