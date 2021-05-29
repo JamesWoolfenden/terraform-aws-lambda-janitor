@@ -55,14 +55,14 @@ repos:
     hooks:
       - id: checkov
         verbose: true
-        entry: checkov -d example/examplea --external-checks-dir checkov
+        entry: checkov -d . --external-checks-dir checkov
   - repo: git://github.com/tfsec/tfsec
     rev: v0.39.34
     hooks:
       - id: tfsec
         entry: tfsec
         args:
-          - example/examplea
+          - .
         types:
           - terraform
         pass_filenames: false
