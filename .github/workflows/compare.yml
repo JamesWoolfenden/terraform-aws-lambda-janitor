@@ -19,7 +19,7 @@ jobs:
           pip3 install lastversion
           lastversion tfsec/tfsec --assets -d
           chmod +x tfsec-linux-amd64
-          ./tfsec-linux-amd64 example/examplea -f json --out tfsec.json
+          ./tfsec-linux-amd64 . -f json --out tfsec.json
         continue-on-error: true
       - name: store
         uses: actions/upload-artifact@v2
@@ -39,7 +39,7 @@ jobs:
         run: |
           pip3 install checkov
       - name: run checkov
-        run: checkov -d  example/examplea -o json | tee checkov.json
+        run: checkov -d  . -o json | tee checkov.json
         continue-on-error: true
       - name: store
         uses: actions/upload-artifact@v2
@@ -67,7 +67,7 @@ jobs:
       - name: run terrascan
         run: |
           ./terrascan init
-          ./terrascan scan -d  example/examplea -o json -x json | tee terrascan.json
+          ./terrascan scan -d  . -o json -x json | tee terrascan.json
         continue-on-error: true
       - name: store
         uses: actions/upload-artifact@v2
@@ -89,7 +89,7 @@ jobs:
           lastversion Checkmarx/kics --assets -d --verbose
           tar -xvf kics*.tar.gz
       - name: run kics
-        run: ./kics scan -p  example/examplea -o kics.json --report-formats json
+        run: ./kics scan -p  . -o kics.json --report-formats json
         continue-on-error: true
       - name: store
         uses: actions/upload-artifact@v2
